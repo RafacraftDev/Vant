@@ -1,4 +1,5 @@
 # Vant Programming Language 🚀
+
 Vant is a modern programming language built for safety and high performance. it ensures a robust and predictable development experience.
 
 # ✨ Key Features
@@ -7,11 +8,47 @@ Vant is a modern programming language built for safety and high performance. it 
 - Safety First: An internal engine designed to prevent runtime type errors.
 - Clean Syntax: Combines the robustness of Java with a modern, streamlined developer experience.
 
-# ​🛠️ Vant Syntax Guide
+# ​🛠️ Vant Syntaxis...
+Vant features a robust and safe syntax that uses
 
-​Variables & Mutability
+## ​Variables & Mutability
 ​Vant categorizes data storage.
 
 1. ​**var**: A standard mutable variable. Its type is locked once assigned.
 2. **​val**: A constant `read-only` variable. Ideal for fixed data.
 3. ​**obj**: A dynamic object variable. Highly flexible for various data types.
+
+## ⭐ Class Structure
+​In **Vant**, a class serves as the essential ***blueprint*** for creating instances and objects. These structures encapsulate data and functions designed to interact with the development environment or manage complex data states. By using a ***construct*** block, Vant ensures that every object is properly initialized, maintaining a clean and predictable flow throughout the code.
+Example: 
+```scala
+// Example of a Vant Class
+class Player {
+    // Properties
+    var nickname = "";
+    val id = 0;
+
+    // The construct block initializes the object
+    construct(name: string, identification: integer) {
+        self.nickname = name;
+        self.id = identification;
+    }
+}
+
+```
+
+## 💡 Function use
+A function in Vant is an essential blueprint for executing specific tasks or logic. While a class defines the structure of an object, a function defines the actions that occur within the development environment. Functions allow you to reuse code, process data, and trigger events efficiently.
+```scala
+var status = string(null);
+// Function (Method)
+def saveData(data: obj) {
+    status = data.stringValue();
+}
+
+// Global function example
+def printStatus(message: string) {
+    cout(self.status);
+}
+
+```
