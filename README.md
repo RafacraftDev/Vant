@@ -33,10 +33,86 @@ class Main {
 
     if (result == 60) {
       printl("result == 60");
-    } elif {
+    } else {
       printl("result != 60, is ${result}");
     }
   }
 }
 Main.main();
+```
+
+key example
+```scala
+import { Key } from "@vant/Key";
+
+forever(() => {
+  if (Key.inDown(Key.SPACE) {
+    printl("SPACE pressed!");
+  }
+});
+```
+
+game example
+```scala
+import { Key } from "@vant/Key";
+import { Visual, Graphics } from "@vant/Visual";
+
+class Game {
+    // We initialize the Visual objects
+    var player = Visual();
+    var enemy = Visual(); 
+    var dirt = Visual();
+    
+    var jumpTime = 0;
+    var jumpTimeMax = 50;
+    
+    @static
+    def main() {
+        // Asset load
+        dirt.texture = "./dirt.png";
+        player.texture = "./player.png";
+        enemy.texture = "./enemy.png";
+        // type of repeated texture
+        dirt.repeatTexture({
+            width: 9999,
+            height: 5
+        });
+        // object coordinates 
+        dirt.y = -100;
+        player.x = 100;
+        enemy.x = -100;
+        
+        (player, enemy, dirt).show();
+        // repetition time
+        forever(() => {
+            Game.update(); 
+            // if the key is pressed
+            if (Key.inDown(Key.SPACE) && player.touch(dirt)) {
+                Game.jumpTime = Game.jumpTimeMax;
+            }
+            // if the jump time is zero
+            if (Game.jumpTime > 0) {
+                player.y += 2;
+                Game.jumpTime -= 1;
+            }
+        });
+    }
+    
+    @static
+    def update() {
+        // player collisions
+        if (player.touch(dirt) == false && Game.jumpTime <= 0) {
+            player.y -= 1;
+        } 
+        // collisions of enemy
+        if (enemy.touch(dirt) == false) {
+            enemy.y -= 1;
+        }
+
+        Graphics.update();
+    }
+}
+
+Game.main();
+
 ```
