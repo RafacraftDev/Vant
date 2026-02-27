@@ -1,5 +1,5 @@
 class hello_world {
-  @staticmethod
+  @static
   def main() {
     cout("Hello, world");
   }
