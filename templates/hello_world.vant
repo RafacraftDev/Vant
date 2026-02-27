@@ -1,0 +1,7 @@
+class hello_world {
+  @staticmethod
+  def main() {
+    cout("Hello, world");
+  }
+}
+hello_world.main();
