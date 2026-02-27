@@ -11,14 +11,16 @@ Vant is a modern programming language built for safety and high performance. it 
 # ​🛠️ Vant Syntaxis...
 Vant features a robust and safe syntax that uses
 
-## ​Variables & Mutability
+### ​Variables & Mutability
 ​Vant categorizes data storage.
 
-1. ​**var**: A standard mutable variable. Its type is locked once assigned.
-2. **​val**: A constant `read-only` variable. Ideal for fixed data.
-3. ​**obj**: A dynamic object variable. Highly flexible for various data types.
+| Type | Mutability | Type Safety | Example |
+| :--- | :--- | :--- | :--- |
+| **var** | Mutable | Strict (Locked) | `var x = 10` |
+| **val** | Immutable | Static | `val PI = 3.14` |
+| **obj** | Mutable | Dynamic | `obj data = "hi"` |
 
-## ⭐ Class Structure
+### ⭐ Class Structure
 ​In **Vant**, a class serves as the essential ***blueprint*** for creating instances and objects. These structures encapsulate data and functions designed to interact with the development environment or manage complex data states. By using a ***construct*** block, Vant ensures that every object is properly initialized, maintaining a clean and predictable flow throughout the code.
 Example: 
 ```scala
@@ -37,7 +39,7 @@ class Player {
 
 ```
 
-## 💡 Function use
+### 💡 Function use
 A function in Vant is an essential blueprint for executing specific tasks or logic. While a class defines the structure of an object, a function defines the actions that occur within the development environment. Functions allow you to reuse code, process data, and trigger events efficiently.
 ```scala
 var status = string(null);
@@ -51,4 +53,32 @@ def printStatus(message: string) {
     cout(self.status);
 }
 
+```
+
+### 🛡️ Null Safety & Default Values
+Vant avoids the `NullPointerException` by automatically converting null types into safe values:
+
+| Conversion | Input | Output (Safe) |
+| :--- | :--- | :--- |
+| `string(null)` | `null` | `""` (Empty String) |
+| `bool(null)` | `null` | `false` |
+| `integer(null)` | `null` | `0` |
+| `decimal(null)` | `null` | `0.0` |
+
+### ⭐ Vant vs Others Lenguages
+Vant combines the readability of dynamic languages with the power of compiled languages.
+| Feature | Python | Java | **Vant** |
+| :--- | :---: | :---: | :---: |
+| Syntax | Simple | Complex | **Simple** |
+| Performance | Medium | High | **High** |
+| Safety | Dynamic | Strict | **Hybrid (var/obj)** |
+
+### 🛡️ Error Handling: The `safe` Block
+Vant uses a native protection structure to prevent unexpected shutdowns.
+```kt
+safe {
+  var x = 0/0;
+} failed (e) {
+  e.printErr();
+}
 ```
