@@ -46,7 +46,7 @@ key example
 import { Key } from "@vant/Key";
 
 forever(() => {
-  if (Key.inDown(Key.SPACE) {
+  if (Key.inDown(Key.SPACE)) {
     printl("SPACE pressed!");
   }
 });
