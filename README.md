@@ -4,9 +4,9 @@ Vant is a modern programming language built for safety and high performance. it 
 
 # ✨ Key Features
 - Unique Variable Management: Full control using var (strict), val (constant), and obj (dynamic).
-- Native File Extension: Support for .vant files.
+- Native File Extension: Support for `.vant` files.
 - Safety First: An internal engine designed to prevent runtime type errors.
-- Clean Syntax: Combines the robustness of Java with a modern, streamlined developer experience.
+- Clean Syntax: Combines the robustness of Java with a `modern`, streamlined developer experience.
 
 # ​🛠️ Vant Syntaxis...
 Vant features a robust and safe syntax that uses
