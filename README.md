@@ -1,95 +1,42 @@
 ![Vant_logo](https://github.com/RafacraftDev/Vant/blob/main/Vant_logo2.png?raw=true)
 
-Vant is a modern programming language built for safety and high performance. it ensures a robust and predictable development experience.
+# 💎 About Vant
+​Vant is a custom programming language I created because I wanted a syntax that felt more "right" than C++ (ironically, the engine behind many languages). Vant scripts use the `.vant` extension.
+​The base syntax is a hybrid: it takes the structure and braces `{}` of Java/C#, the clean variable handling of Kotlin, and the simplicity of functions and comparisons from Python.
 
-# ✨ Key Features
-- Unique Variable Management: Full control using var (strict), val (constant), and obj (dynamic).
-- Native File Extension: Support for `.vant` files.
-- Safety First: An internal engine designed to prevent runtime type errors.
-- Clean Syntax: Combines the robustness of Java with a `modern`, streamlined developer experience.
+# ⚠️ Before using Vant (The Reality Check)
+Vant is a passion project developed in my free time between school, other coding experiments, and my [Youtube channel](https://youtube.com/@rafacraftcoder?si=8IM1v9t_agLFbkBq) Because of that, you should keep in mind:
+- Documentation: Non-existent. You are the pioneer here.
+- Stability: Most errors will simply crash the interpreter without warning. It's not a bug, it's a "surprise exit".
+- Performance: It's an interpreter, not a rocket. It's built for learning and fun, not for mining Bitcoin.
 
-### ❓ Why use it?
-It contains a large number of features and secure methods that create a safe way to code on any device, as it has an application for use from Android.
+Initially, Vant was designed to be the bare minimum needed to create functional logic with a safe-guard twist (like the safe / failed blocks). It’s a work in progress that will likely evolve as long as I find it interesting to code.
 
-# ​🛠️ Vant Syntaxis
-Vant features a robust and safe syntax that uses
-
-### ​Variables & Mutability
-​Vant categorizes data storage.
-
-| Type | Mutability | Type Safety | Example |
+# 🚀 Quick comparison
+| Feature | Python | Java | Vant |
 | :--- | :--- | :--- | :--- |
-| **var** | Mutable | Strict (Locked) | `var x = 10` |
-| **val** | Immutable | Static | `val PI = 3.14` |
-| **obj** | Mutable | Dynamic | `obj data = "hi"` |
+| Variable | x = 10 | int x = 10 | var x = 10; |
+| Input | input() | Scanner | input() |
+| Strings | "hi" == "hi" | "hi".equals("hi") | "hi" == "hi" |
+| Safety | try/except | try/catch | safe/failed |
 
-### ⭐ Class Structure
-​In **Vant**, a class serves as the essential ***blueprint*** for creating instances and objects. These structures encapsulate data and functions designed to interact with the development environment or manage complex data states. By using a ***construct*** block, Vant ensures that every object is properly initialized, maintaining a clean and predictable flow throughout the code.
-Example: 
+# Here is some example code:
 ```scala
-// Example of a Vant Class
-class Player {
-    // Properties
-    var nickname = "";
-    val id = 0;
+class Main {
+  @static
+  def main() {
+    // variables types "var|val|obj";
+    var x = 10;
+    val y = 20;
+    obj z = 30;
+    var result = x + y + ((integer) z);
 
-    // The construct block initializes the object
-    construct(name: string, identification: integer) {
-        self.nickname = name;
-        self.id = identification;
+    if (result == 60) {
+      printl("result == 60");
+    } elif {
+      printl("result != 60, is ${result}");
     }
+  }
 }
-
+Main.main();
 ```
-
-### 💡 Function use
-A function in Vant is an essential blueprint for executing specific tasks or logic. While a class defines the structure of an object, a function defines the actions that occur within the development environment. Functions allow you to reuse code, process data, and trigger events efficiently.
-```scala
-var status = string(null);
-// Function (Method)
-def saveData(data: obj) {
-    status = data.stringValue();
-}
-
-// Global function example
-def printStatus(message: string) {
-    cout(self.status);
-}
-
-```
-
-### 🛡️ Null Safety & Default Values
-Vant avoids the `NullPointerException` by automatically converting null types into safe values:
-
-| Conversion | Input | Output (Safe) |
-| :--- | :--- | :--- |
-| `string(null)` | `null` | `""` (Empty String) |
-| `bool(null)` | `null` | `false` |
-| `integer(null)` | `null` | `0` |
-| `decimal(null)` | `null` | `0.0` |
-
-### ⭐ Vant vs Others Lenguages
-Vant combines the readability of dynamic languages with the power of compiled languages.
-| Feature | Python | Java | **Vant** |
-| :--- | :---: | :---: | :---: |
-| Syntax | Simple | Complex | **Simple** |
-| Performance | Medium | High | **High** |
-| Safety | Dynamic | Strict | **Hybrid (var/obj)** |
-
-### 🛡️ Error Handling: The `safe` Block
-Vant uses a native protection structure to prevent unexpected shutdowns.
-```swift
-safe {
-  var x = 0/0;
-} failed(e) {
-  e.printErr();
-}
-```
-
-### 📈 Differences with other languages
-| Language | Syntax Example | Type System |
-| :--- | :--- | :--- |
-| **Java** | `int x = 10;` | Static (Explicit) |
-| **JavaScript** | `let x = 10;` | Dynamic |
-| **Python** | `x = 10` | Dynamic |
-| **Vant** | `var x = 10;` | **Strict (Inferred & Locked)** |
