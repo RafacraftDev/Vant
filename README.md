@@ -8,7 +8,10 @@ Vant is a modern programming language built for safety and high performance. it 
 - Safety First: An internal engine designed to prevent runtime type errors.
 - Clean Syntax: Combines the robustness of Java with a `modern`, streamlined developer experience.
 
-# ​🛠️ Vant Syntaxis...
+### ❓ Why use it?
+It contains a large number of features and secure methods that create a safe way to code on any device, as it has an application for use from Android.
+
+# ​🛠️ Vant Syntaxis
 Vant features a robust and safe syntax that uses
 
 ### ​Variables & Mutability
@@ -75,10 +78,18 @@ Vant combines the readability of dynamic languages with the power of compiled la
 
 ### 🛡️ Error Handling: The `safe` Block
 Vant uses a native protection structure to prevent unexpected shutdowns.
-```kt
+```swift
 safe {
   var x = 0/0;
-} failed (e) {
+} failed(e) {
   e.printErr();
 }
 ```
+
+### 📈 Differences with other languages
+| Language | Syntax Example | Type System |
+| :--- | :--- | :--- |
+| **Java** | `int x = 10;` | Static (Explicit) |
+| **JavaScript** | `let x = 10;` | Dynamic |
+| **Python** | `x = 10` | Dynamic |
+| **Vant** | `var x = 10;` | **Strict (Inferred & Locked)** |
