@@ -1,12 +1,6 @@
-class Person {
-  var name = string(null);
-  construct(name: string) {
-    self.name = name;
-  }
-  def say_hello() {
-    cout("Hello, ${self.name}");
+class Main {
+  def main() {
+    printl("Hola, mundo!");
   }
 }
-
-var person = Person("Ralf");
-person.say_hello();
+Main.main();
