@@ -140,7 +140,7 @@ class User {
             self.gmail = gmail;
         } else {
             Error.put("doesnt exists gmail");
-        } if (User.exists(user)) {
+        } if (User.exists(user) == false) {
             self.username = user;
         } else {
             Error.put("this name is used");
