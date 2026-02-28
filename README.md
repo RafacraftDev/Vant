@@ -21,4 +21,4 @@ Initially, Vant was designed to be the bare minimum needed to create functional 
 | Strings | "hi" == "hi" | "hi".equals("hi") | "hi" == "hi" |
 | Safety | try/except | try/catch | safe/failed |
 
-# View the example codes [in here button]()
+### View the example codes [in here button](https://github.com/RafacraftDev/Vant/blob/35202693f0fa4543e3cd1b584279e5b0a370a90f/EXAMPLES.md)
