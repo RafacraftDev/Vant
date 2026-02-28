@@ -117,3 +117,41 @@ class Game {
 Game.main();
 
 ```
+
+Testing the startup of sections with Google Gmail
+```scala
+import { Users } from "./users/usersList";
+import { Gmail } from "@vant/gmail";
+
+class User {
+    var password = string(null);
+    var gmail = string(null);
+    var username = string(null);
+    
+    def createAccount( pass: string, gmail: string, user: string) : Error : Async : {
+        var getter = Gmail.exists(gmail);
+        until(getter.response() == true);
+        var existsGmail = getter.getExists();
+        if (len(pass) >= 8) {
+            self.password = pass.encrypt;
+        } else {
+            Error.put("password is unsafe");
+        } if (existsGmail == true) {
+            self.gmail = gmail;
+        } else {
+            Error.put("doesnt exists gmail");
+        } if (User.exists(user)) {
+            self.username = user;
+        } else {
+            Error.put("this name is used");
+        }
+        exit new User;
+    }
+}
+
+User pablo = createAccount(
+    "12345",
+    "pablojuarez62@gmail.com",
+    "pablo juarez"
+);
+```
