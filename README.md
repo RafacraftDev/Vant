@@ -141,6 +141,7 @@ class User {
         } else {
             Error.put("doesnt exists gmail");
         } if (User.exists(user) == false) {
+            User.add(user);
             self.username = user;
         } else {
             Error.put("this name is used");
