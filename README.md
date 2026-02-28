@@ -128,7 +128,7 @@ class User {
     var gmail = string(null);
     var username = string(null);
     
-    def createAccount( pass: string, gmail: string, user: string) : Error : Async : {
+    construct( pass: string, gmail: string, user: string) : Error : Async : {
         var getter = Gmail.exists(gmail);
         until(getter.response() == true);
         var existsGmail = getter.getExists();
@@ -145,13 +145,18 @@ class User {
         } else {
             Error.put("this name is used");
         }
-        exit new User;
     }
+    def createAccount( pass: string, gmail: string, user: string) {
+        return new User(pass,gmail,user);
 }
 
-User pablo = createAccount(
-    "12345",
-    "pablojuarez62@gmail.com",
-    "pablo juarez"
-);
+safe {
+    User pablo = createAccount(
+        "12345",
+        "pablojuarez62@gmail.com",
+        "pablo juarez"
+    );
+} failed (e) {
+    e.printErr();
+}
 ```
