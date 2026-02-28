@@ -15,23 +15,23 @@ class Key {
   Digit5: "5", Digit6: "6", Digit7: "7", Digit8: "8", Digit9: "9",
 
   // Flechas
-  ArrowUp: "up",
-  ArrowDown: "down",
-  ArrowLeft: "left",
-  ArrowRight: "right",
+  ArrowUp: "ArrowUp",
+  ArrowDown: "ArrowDown",
+  ArrowLeft: "ArrowLeft",
+  ArrowRight: "ArrowRight",
 
   // Teclas especiales
   Space: " ",
-  Enter: "enter",
-  Escape: "escape",
-  Tab: "tab",
-  Backspace: "backspace",
-  ShiftLeft: "shift",
-  ShiftRight: "shift",
-  ControlLeft: "ctrl",
-  ControlRight: "ctrl",
-  AltLeft: "alt",
-  AltRight: "alt"
+  Enter: "Enter",
+  Escape: "Escape",
+  Tab: "Tab",
+  Backspace: "Backspace",
+  ShiftLeft: "Shift",
+  ShiftRight: "Shift",
+  ControlLeft: "Ctrl",
+  ControlRight: "Ctrl",
+  AltLeft: "Alt",
+  AltRight: "Alt"
 
 };
     
