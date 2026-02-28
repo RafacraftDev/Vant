@@ -27,7 +27,7 @@ Example of how to use the keyboard keys
 import { Key } from "@vant/Key";
 
 forever(() => {
-  if (Key.inDown(Key.SPACE)) {
+  if (Key.inDown(Key.k.SPACE)) {
     printl("SPACE pressed!");
   }
 });
@@ -68,7 +68,7 @@ class Game {
         forever(() => {
             Game.update(); 
             // if the key is pressed
-            if (Key.inDown(Key.SPACE) && player.touch(dirt)) {
+            if (Key.inDown(Key.k.SPACE) && player.touch(dirt)) {
                 Game.jumpTime = Game.jumpTimeMax;
             }
             // if the jump time is zero
