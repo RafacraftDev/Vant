@@ -1,0 +1,13 @@
+import { Js } from "./Js";
+
+class Intent {
+  var file = string(null);
+  
+  construct(url: string) {
+    self.file = url;
+  }
+  
+  def open() {
+    Js.exec(`window.location.href = "${self.file}";`);
+  }
+}
