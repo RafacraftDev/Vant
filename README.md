@@ -1,4 +1,5 @@
-![Vant_logo](https://github.com/RafacraftDev/Vant/blob/main/Vant_logo2.png?raw=true)
+<img width="1280" height="720" alt="1000253733" src="https://github.com/user-attachments/assets/6f46496c-5733-44a7-aedf-180a8810e65a" />
+
 
 # 💎 About Vant
 ​Vant is a custom programming language I created because I wanted a syntax that felt more "right" than C++ (ironically, the engine behind many languages). Vant scripts use the `.vant` extension.
